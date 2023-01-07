@@ -5,9 +5,10 @@ export const replaceCamelWithSpaces = colorName =>
 	colorName.replace(/\B([A-Z])\B/g, ' $1');
 
 const App = () => {
-	const [buttonColor, setButtonColor] = useState('red');
+	const [buttonColor, setButtonColor] = useState('MediumVioletRed');
 	const [isDisabled, setIsDisabled] = useState(false);
-	const newButtonColor = buttonColor === 'red' ? 'blue' : 'red';
+	const newButtonColor =
+		buttonColor === 'MediumVioletRed' ? 'MidnightBlue' : 'MediumVioletRed';
 
 	return (
 		<div className='App'>
@@ -17,14 +18,13 @@ const App = () => {
 				disabled={isDisabled}
 				className='btn'
 			>
-				Change to {newButtonColor}
+				Change to {replaceCamelWithSpaces(newButtonColor)}
 			</button>
 			<input
 				type='checkbox'
 				defaultChecked={false}
 				value={isDisabled}
 				onClick={() => setIsDisabled(!isDisabled)}
-				name='Disable button'
 				id='checkbox'
 			/>
 			<label htmlFor='checkbox'>Disable button</label>
