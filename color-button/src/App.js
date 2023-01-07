@@ -23,7 +23,7 @@ const App = () => {
 				value={isDisabled}
         onClick={() => setIsDisabled(!isDisabled)}
 				name='Disable button'
-				className='checkbox'
+				id='checkbox'
 			/>
 			<label htmlFor='checkbox'>Disable button</label>
 		</div>
