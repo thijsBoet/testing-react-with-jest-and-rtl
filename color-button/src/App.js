@@ -7,12 +7,13 @@ const App = () => {
   const [isDisabled, setIsDisabled] = useState(false)
   const newButtonColor = buttonColor === 'red' ? 'blue' : 'red';
 
+
 	return (
 		<div className='App'>
 			<button
 				onClick={() => setButtonColor(newButtonColor)}
-				style={{ backgroundColor: buttonColor }}
-        disabled={isDisabled}
+				style={{ backgroundColor: isDisabled ? 'gray' : buttonColor }}
+				disabled={isDisabled}
 				className='btn'
 			>
 				Change to {newButtonColor}
@@ -21,7 +22,7 @@ const App = () => {
 				type='checkbox'
 				defaultChecked={false}
 				value={isDisabled}
-        onClick={() => setIsDisabled(!isDisabled)}
+				onClick={() => setIsDisabled(!isDisabled)}
 				name='Disable button'
 				id='checkbox'
 			/>
