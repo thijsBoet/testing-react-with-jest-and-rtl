@@ -1,5 +1,4 @@
 import { render, screen, fireEvent, logRoles } from '@testing-library/react';
-
 import App, { replaceCamelWithSpaces } from './App';
 
 test('button has the correct initial color', () => {
@@ -21,7 +20,7 @@ test('button turns MidnightBlue when clicked', () => {
 	const colorButton = screen.getByRole('button', { name: 'Change to Midnight Blue' });
 	fireEvent.click(colorButton);
 	expect(colorButton).toHaveTextContent('Change to Medium Violet Red');
-}); 
+});
 
 test('initial conditions', () => {
 	render(<App />);
