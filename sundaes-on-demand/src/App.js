@@ -1,11 +1,13 @@
+import OrderSummary from './components/pages/summary/OrderSummary';
+
 import './App.css';
 
 
 const App = () => {
-	return (
+  return (
+    
 		<div className=''>
-			<h1 className=''>Design Your Sundae</h1>
-			<h3 className=''>Scoops</h3>
+			<OrderSummary />
 		</div>
 	);
 };
